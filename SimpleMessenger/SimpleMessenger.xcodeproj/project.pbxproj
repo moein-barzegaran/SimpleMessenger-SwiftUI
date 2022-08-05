@@ -32,6 +32,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5090E66D289D42AC00E160FB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				50BD6031289C26C3001B72CC /* ContentView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5090E66E289D42B800E160FB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5090E66F289D42CA00E160FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		50BD6023289C26C3001B72CC = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +74,9 @@
 		50BD602E289C26C3001B72CC /* SimpleMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */,
-				50BD6031289C26C3001B72CC /* ContentView.swift */,
+				5090E66E289D42B800E160FB /* Application */,
+				5090E66D289D42AC00E160FB /* Scenes */,
+				5090E66F289D42CA00E160FB /* Models */,
 				50BD6033289C26C4001B72CC /* Assets.xcassets */,
 				50BD6035289C26C4001B72CC /* Preview Content */,
 			);
