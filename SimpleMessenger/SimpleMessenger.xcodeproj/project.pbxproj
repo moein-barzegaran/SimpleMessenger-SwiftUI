@@ -7,16 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5090E671289DA70300E160FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090E670289DA70300E160FB /* Post.swift */; };
+		5090E673289DA7DA00E160FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090E672289DA7DA00E160FB /* User.swift */; };
+		5090E676289DB24200E160FB /* DropDownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090E675289DB24200E160FB /* DropDownList.swift */; };
+		5090E678289E96AD00E160FB /* AvatarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090E677289E96AD00E160FB /* AvatarRow.swift */; };
+		5090E67B289EB01600E160FB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5090E67A289EB01600E160FB /* Colors.xcassets */; };
+		5090E67F289EB0C000E160FB /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090E67E289EB0C000E160FB /* Color+Extensions.swift */; };
+		509A2FA1289EBEC900EA8A68 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA0289EBEC900EA8A68 /* HomeViewModel.swift */; };
+		509A2FA5289EC1EA00EA8A68 /* HomeViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA4289EC1EA00EA8A68 /* HomeViewComposer.swift */; };
+		509A2FA7289ED43D00EA8A68 /* SelectedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */; };
 		50BD6030289C26C3001B72CC /* SimpleMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */; };
-		50BD6032289C26C3001B72CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6031289C26C3001B72CC /* ContentView.swift */; };
+		50BD6032289C26C3001B72CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6031289C26C3001B72CC /* HomeView.swift */; };
 		50BD6034289C26C4001B72CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD6033289C26C4001B72CC /* Assets.xcassets */; };
 		50BD6037289C26C4001B72CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD6036289C26C4001B72CC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5090E670289DA70300E160FB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5090E672289DA7DA00E160FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5090E675289DB24200E160FB /* DropDownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownList.swift; sourceTree = "<group>"; };
+		5090E677289E96AD00E160FB /* AvatarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarRow.swift; sourceTree = "<group>"; };
+		5090E67A289EB01600E160FB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5090E67E289EB0C000E160FB /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		509A2FA0289EBEC900EA8A68 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		509A2FA4289EC1EA00EA8A68 /* HomeViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewComposer.swift; sourceTree = "<group>"; };
+		509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedUserView.swift; sourceTree = "<group>"; };
 		50BD602C289C26C3001B72CC /* SimpleMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessengerApp.swift; sourceTree = "<group>"; };
-		50BD6031289C26C3001B72CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50BD6031289C26C3001B72CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50BD6033289C26C4001B72CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BD6036289C26C4001B72CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,7 +53,8 @@
 		5090E66D289D42AC00E160FB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				50BD6031289C26C3001B72CC /* ContentView.swift */,
+				5090E674289DB22A00E160FB /* Components */,
+				509A2FA2289EC1C700EA8A68 /* HomeScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -51,8 +70,63 @@
 		5090E66F289D42CA00E160FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5090E670289DA70300E160FB /* Post.swift */,
+				5090E672289DA7DA00E160FB /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5090E674289DB22A00E160FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5090E675289DB24200E160FB /* DropDownList.swift */,
+				5090E677289E96AD00E160FB /* AvatarRow.swift */,
+				509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5090E679289EAFF300E160FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50BD6033289C26C4001B72CC /* Assets.xcassets */,
+				5090E67A289EB01600E160FB /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5090E67C289EB0A200E160FB /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5090E67D289EB0AC00E160FB /* Extensions */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5090E67D289EB0AC00E160FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5090E67E289EB0C000E160FB /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		509A2FA2289EC1C700EA8A68 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				509A2FA3289EC1D700EA8A68 /* Composer */,
+				50BD6031289C26C3001B72CC /* HomeView.swift */,
+				509A2FA0289EBEC900EA8A68 /* HomeViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		509A2FA3289EC1D700EA8A68 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				509A2FA4289EC1EA00EA8A68 /* HomeViewComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 		50BD6023289C26C3001B72CC = {
@@ -77,7 +151,8 @@
 				5090E66E289D42B800E160FB /* Application */,
 				5090E66D289D42AC00E160FB /* Scenes */,
 				5090E66F289D42CA00E160FB /* Models */,
-				50BD6033289C26C4001B72CC /* Assets.xcassets */,
+				5090E67C289EB0A200E160FB /* Foundation */,
+				5090E679289EAFF300E160FB /* Resources */,
 				50BD6035289C26C4001B72CC /* Preview Content */,
 			);
 			path = SimpleMessenger;
@@ -149,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5090E67B289EB01600E160FB /* Colors.xcassets in Resources */,
 				50BD6037289C26C4001B72CC /* Preview Assets.xcassets in Resources */,
 				50BD6034289C26C4001B72CC /* Assets.xcassets in Resources */,
 			);
@@ -161,8 +237,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BD6032289C26C3001B72CC /* ContentView.swift in Sources */,
+				5090E673289DA7DA00E160FB /* User.swift in Sources */,
+				509A2FA5289EC1EA00EA8A68 /* HomeViewComposer.swift in Sources */,
+				5090E671289DA70300E160FB /* Post.swift in Sources */,
+				50BD6032289C26C3001B72CC /* HomeView.swift in Sources */,
+				509A2FA7289ED43D00EA8A68 /* SelectedUserView.swift in Sources */,
+				509A2FA1289EBEC900EA8A68 /* HomeViewModel.swift in Sources */,
+				5090E678289E96AD00E160FB /* AvatarRow.swift in Sources */,
+				5090E67F289EB0C000E160FB /* Color+Extensions.swift in Sources */,
 				50BD6030289C26C3001B72CC /* SimpleMessengerApp.swift in Sources */,
+				5090E676289DB24200E160FB /* DropDownList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
