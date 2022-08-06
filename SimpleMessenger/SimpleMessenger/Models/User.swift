@@ -8,16 +8,22 @@
 import UIKit
 
 class User: Identifiable {
-    let id = UUID()
+    let id: String
     let name: String
     let username: String
     let image: UIImage?
-    var posts: [Post]
     
-    init(name: String, username: String, image: UIImage?, posts: [Post] = []) {
+    init(name: String, username: String, image: UIImage?) {
+        self.id = UUID().uuidString
         self.name = name
         self.username = username
-        self.posts = posts
         self.image = image
+    }
+    
+    init() {
+        self.id = UUID().uuidString
+        self.name = ""
+        self.username = ""
+        self.image = nil
     }
 }

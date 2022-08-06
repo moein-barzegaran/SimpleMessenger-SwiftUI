@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct DropDownList: View {
-    struct DropDownItem: Identifiable {
-        let id = UUID()
+    struct DropDownItem {
         let image: UIImage?
         let title: String
         let subtitle: String?

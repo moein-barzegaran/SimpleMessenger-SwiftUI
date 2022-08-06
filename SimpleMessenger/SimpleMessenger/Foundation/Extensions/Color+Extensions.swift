@@ -11,4 +11,5 @@ import SwiftUI
 extension Color {
     static let background = Color("background")
     static let rowBackground = Color("rowBackground")
+    static let textSecondary = Color("textSecondary")
 }

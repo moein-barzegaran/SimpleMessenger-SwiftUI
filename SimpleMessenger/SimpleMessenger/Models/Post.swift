@@ -8,9 +8,20 @@
 import Foundation
 
 struct Post: Identifiable {
-    let id = UUID()
-    let name: String
-    let username: String
+    let id: String
+    let user: User
     let caption: String
-    let image: String
+    let postImage: String
+    
+    init(
+        user: User,
+        caption: String,
+        postImage: String
+    ) {
+        self.id = UUID().uuidString
+        self.user = user
+        self.caption = caption
+        self.postImage = postImage
+        
+    }
 }

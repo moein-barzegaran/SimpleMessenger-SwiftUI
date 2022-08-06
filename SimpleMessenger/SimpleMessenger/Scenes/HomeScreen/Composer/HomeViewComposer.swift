@@ -12,8 +12,9 @@ struct HomeViewComposer {
         .init(viewModel: viewModel)
     }
     
-    static func makeHomeViewModel(userList: [User]) -> HomeView {
-        let viewModel = HomeViewModel(userList: userList, selectedUser: userList[0])
+    static func makeHomeViewModel() -> HomeView {
+        let viewModel = HomeViewModel(userService: MockUserService(),
+                                      postService: MockPostService())
         return compose(viewModel: viewModel)
     }
 }

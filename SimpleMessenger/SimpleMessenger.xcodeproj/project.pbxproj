@@ -16,6 +16,11 @@
 		509A2FA1289EBEC900EA8A68 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA0289EBEC900EA8A68 /* HomeViewModel.swift */; };
 		509A2FA5289EC1EA00EA8A68 /* HomeViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA4289EC1EA00EA8A68 /* HomeViewComposer.swift */; };
 		509A2FA7289ED43D00EA8A68 /* SelectedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */; };
+		509A2FA9289ED59E00EA8A68 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FA8289ED59E00EA8A68 /* PostView.swift */; };
+		509A2FAC289EEA7900EA8A68 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FAB289EEA7900EA8A68 /* PostService.swift */; };
+		509A2FAE289EF11100EA8A68 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FAD289EF11100EA8A68 /* UserService.swift */; };
+		509A2FB1289F0BF500EA8A68 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FB0289F0BF500EA8A68 /* NewPostView.swift */; };
+		509A2FB3289F0D6800EA8A68 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2FB2289F0D6800EA8A68 /* NewPostViewModel.swift */; };
 		50BD6030289C26C3001B72CC /* SimpleMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */; };
 		50BD6032289C26C3001B72CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6031289C26C3001B72CC /* HomeView.swift */; };
 		50BD6034289C26C4001B72CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BD6033289C26C4001B72CC /* Assets.xcassets */; };
@@ -32,6 +37,11 @@
 		509A2FA0289EBEC900EA8A68 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		509A2FA4289EC1EA00EA8A68 /* HomeViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewComposer.swift; sourceTree = "<group>"; };
 		509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedUserView.swift; sourceTree = "<group>"; };
+		509A2FA8289ED59E00EA8A68 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		509A2FAB289EEA7900EA8A68 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		509A2FAD289EF11100EA8A68 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		509A2FB0289F0BF500EA8A68 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		509A2FB2289F0D6800EA8A68 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		50BD602C289C26C3001B72CC /* SimpleMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD602F289C26C3001B72CC /* SimpleMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessengerApp.swift; sourceTree = "<group>"; };
 		50BD6031289C26C3001B72CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -55,6 +65,7 @@
 			children = (
 				5090E674289DB22A00E160FB /* Components */,
 				509A2FA2289EC1C700EA8A68 /* HomeScreen */,
+				509A2FAF289F0BDE00EA8A68 /* NewPostView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -82,6 +93,7 @@
 				5090E675289DB24200E160FB /* DropDownList.swift */,
 				5090E677289E96AD00E160FB /* AvatarRow.swift */,
 				509A2FA6289ED43D00EA8A68 /* SelectedUserView.swift */,
+				509A2FA8289ED59E00EA8A68 /* PostView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,6 +141,24 @@
 			path = Composer;
 			sourceTree = "<group>";
 		};
+		509A2FAA289EEA5000EA8A68 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				509A2FAB289EEA7900EA8A68 /* PostService.swift */,
+				509A2FAD289EF11100EA8A68 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		509A2FAF289F0BDE00EA8A68 /* NewPostView */ = {
+			isa = PBXGroup;
+			children = (
+				509A2FB0289F0BF500EA8A68 /* NewPostView.swift */,
+				509A2FB2289F0D6800EA8A68 /* NewPostViewModel.swift */,
+			);
+			path = NewPostView;
+			sourceTree = "<group>";
+		};
 		50BD6023289C26C3001B72CC = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +181,7 @@
 				5090E66E289D42B800E160FB /* Application */,
 				5090E66D289D42AC00E160FB /* Scenes */,
 				5090E66F289D42CA00E160FB /* Models */,
+				509A2FAA289EEA5000EA8A68 /* Service */,
 				5090E67C289EB0A200E160FB /* Foundation */,
 				5090E679289EAFF300E160FB /* Resources */,
 				50BD6035289C26C4001B72CC /* Preview Content */,
@@ -239,14 +270,19 @@
 			files = (
 				5090E673289DA7DA00E160FB /* User.swift in Sources */,
 				509A2FA5289EC1EA00EA8A68 /* HomeViewComposer.swift in Sources */,
+				509A2FAC289EEA7900EA8A68 /* PostService.swift in Sources */,
+				509A2FB1289F0BF500EA8A68 /* NewPostView.swift in Sources */,
 				5090E671289DA70300E160FB /* Post.swift in Sources */,
 				50BD6032289C26C3001B72CC /* HomeView.swift in Sources */,
 				509A2FA7289ED43D00EA8A68 /* SelectedUserView.swift in Sources */,
+				509A2FAE289EF11100EA8A68 /* UserService.swift in Sources */,
+				509A2FB3289F0D6800EA8A68 /* NewPostViewModel.swift in Sources */,
 				509A2FA1289EBEC900EA8A68 /* HomeViewModel.swift in Sources */,
 				5090E678289E96AD00E160FB /* AvatarRow.swift in Sources */,
 				5090E67F289EB0C000E160FB /* Color+Extensions.swift in Sources */,
 				50BD6030289C26C3001B72CC /* SimpleMessengerApp.swift in Sources */,
 				5090E676289DB24200E160FB /* DropDownList.swift in Sources */,
+				509A2FA9289ED59E00EA8A68 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,19 +21,27 @@ struct SelectedUserView: View {
                     .padding(8)
             }
             
-            VStack (alignment: .leading) {
+            HStack(alignment: .center) {
                 Text(selectedUser.name)
-                    .foregroundColor(.black)
-                    .padding([.leading, .top], 4)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(.textSecondary)
                 
                 if let subtitle = selectedUser.username {
                     Text(subtitle)
-                        .foregroundColor(.gray)
-                        .padding([.leading, .bottom], 2)
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundColor(Color.textSecondary.opacity(0.7))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
         }
     }
 }
+
+struct SelectedUserView_Previews: PreviewProvider {
+    static var previews: some View {
+        SelectedUserView(selectedUser: .constant(.init(name: "User 1",
+                                                       username: "@User1",
+                                                       image: UIImage(named: "user-1"))))
+    }
+}
+

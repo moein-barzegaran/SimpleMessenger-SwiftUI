@@ -8,15 +8,47 @@
 import Combine
 
 class HomeViewModel: ObservableObject {
-    @Published var selectedUser: User
+    @Published var selectedUser: User = .init()
     @Published var userList: [User] = []
+    @Published var postList: [Post] = []
+    private var newPosts: [Post] = []
     
-    func findUser(username: String) -> User? {
-        userList.filter({ $0.username == username }).first
+    private let postService: PostService
+    private let userService: UserService
+    
+    init(userService: UserService, postService: PostService) {
+        self.userService = userService
+        self.postService = postService
     }
     
-    init(userList: [User], selectedUser: User) {
-        self.selectedUser = selectedUser
-        self.userList = userList
+    func findUser(userId: String) -> User? {
+        userList.filter({ $0.id == userId }).first
+    }
+    
+    func addNewPost(_ post: Post) {
+        newPosts.append(post)
+        postList.append(contentsOf: newPosts)
+    }
+    
+    func changeUserAction() {
+        getUserPosts()
+    }
+    
+    func onAppearAction() {
+        getUsers()
+        getUserPosts()
+    }
+}
+
+// MARK: Private methods
+private extension HomeViewModel {
+    func getUsers() {
+        userList = userService.fetchUsers()
+        selectedUser = userList[0]
+    }
+    
+    func getUserPosts() {
+        postList = postService.fetchPosts(user: selectedUser)
+        postList.append(contentsOf: newPosts)
     }
 }

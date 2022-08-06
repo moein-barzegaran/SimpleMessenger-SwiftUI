@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State private var showNewPost = false
     @State private var showUserList = false
     @ObservedObject var viewModel: HomeViewModel
     
@@ -18,22 +19,42 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                SelectedUserView(selectedUser: $viewModel.selectedUser)
-                .padding()
-                .padding(.leading)
-                .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .padding(.horizontal)
-                        .foregroundColor(.white)
-                )
+                HStack(alignment: .center, spacing: .zero) {
+                    SelectedUserView(selectedUser: $viewModel.selectedUser)
+                        .padding(.leading, 24)
+                        .padding([.top, .bottom], 4)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .padding([.leading])
+                                .foregroundColor(.rowBackground)
+                        )
+                        .onTapGesture {
+                            withAnimation {
+                                showUserList.toggle()
+                            }
+                        }
+                    
+                    Button {
+                        showNewPost.toggle()
+
+                    } label: {
+                        Image(systemName: "plus.square.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .tint(.rowBackground)
+                            .frame(width: 20, height: 20)
+                    }
+                    .padding()
+                }
                 .padding(.top)
-                .onTapGesture {
-                    withAnimation {
-                        showUserList.toggle()
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.postList, id: \.id) { item in
+                            PostView(post: item)
+                        }
                     }
                 }
-                
-                Spacer()
             }
             
             if showUserList {
@@ -50,9 +71,9 @@ struct HomeView: View {
                         ) { item in
                             showUserList = false
                             guard let username = item.subtitle else { return }
-                            guard let selectedUser = viewModel.findUser(username: username) else { return }
+                            guard let selectedUser = viewModel.userList.filter({ $0.username == username }).first else { return }
                             viewModel.selectedUser = selectedUser
-                            print(selectedUser.username)
+                            viewModel.changeUserAction()
                         }
                         .padding()
                         .transition(
@@ -64,6 +85,14 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.onAppearAction()
+        }
+        .sheet(isPresented: $showNewPost) {
+            NewPostView(shouldShow: $showNewPost, user: viewModel.selectedUser) { post in
+                viewModel.addNewPost(post)
+            }
+        }
     }
     
     func map(userList: [User]) -> [DropDownList.DropDownItem] {
@@ -73,12 +102,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel:
-                .init(userList: [.init(name: "User 1",
-                                       username: "@User_1",
-                                       image: UIImage(systemName: "person.circle.fill"))],
-                      selectedUser: .init(name: "User 1",
-                                          username: "@User_1",
-                                          image: UIImage(systemName: "person.circle.fill"))))
+        HomeView(viewModel: .init(userService: MockUserService(),
+                                  postService: MockPostService()))
     }
 }
